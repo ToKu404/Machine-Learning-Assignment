@@ -6,9 +6,9 @@ Analisis asosiasi (*Association Rule*) adalah metode *machine learning* dan *dat
 
 Bentuk umum dari Aturan asosiasi yaitu:
 
-Misalkan $𝐼 = {𝐼_1,𝐼_2, ⋯ ,𝐼_𝑚}$  merupakan kumpulan  item. Sekumpulan item disebut sebagai ***itemset***. *Itemset* yang mengandung k-*item* disebut ***k-itemset***. **D** merupakan database yang terdiri dari kumpulan transakasi (*T*), dimana $ T\subseteq I$. Setiap transaksi memiliki *ID* transaksi yang disebut *TID*.   
+Misalkan 𝐼 = {𝐼1,𝐼2, ⋯ ,𝐼𝑚}  merupakan kumpulan  item. Sekumpulan item disebut sebagai ***itemset***. *Itemset* yang mengandung k-*item* disebut ***k-itemset***. **D** merupakan database yang terdiri dari kumpulan transakasi (*T*), dimana T->I. Setiap transaksi memiliki *ID* transaksi yang disebut *TID*.   
 
-Sebuah *association rule* dituliskan dalam bentuk X &#8594; Y, dimana  $ X\subset I$,  $ Y\subset I$. *Association rule* berbentuk *“If antecendent then consequent”* (Larose & Larose, 2015). *X* disebut sebagai *Antecedent atau left-hand side (LHS)* dan *Y* disebut *Consequent atau right-hand side (RHS)*. 
+Sebuah *association rule* dituliskan dalam bentuk X &#8594; Y, dimana  X->I,  Y->I. *Association rule* berbentuk *“If antecendent then consequent”* (Larose & Larose, 2015). *X* disebut sebagai *Antecedent atau left-hand side (LHS)* dan *Y* disebut *Consequent atau right-hand side (RHS)*. 
 
 *"If roti dan mentega, maka susu" ("Jika roti dan mentega dibel, maka susu juga akan dibeli pelanggan")*
 
@@ -16,7 +16,7 @@ Sebuah *association rule* dituliskan dalam bentuk X &#8594; Y, dimana  $ X\subs
 
 *Consequent*	: Susu 
 
-*Itemset*			: {Roti, Mentega, Susu}
+*Itemset*		: {Roti, Mentega, Susu}
 
 
 
