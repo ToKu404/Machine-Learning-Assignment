@@ -8,7 +8,7 @@ Bentuk umum dari Aturan asosiasi yaitu:
 
 Misalkan 𝐼 = {𝐼1,𝐼2, ⋯ ,𝐼𝑚}  merupakan kumpulan  item. Sekumpulan item disebut sebagai ***itemset***. *Itemset* yang mengandung k-*item* disebut ***k-itemset***. **D** merupakan database yang terdiri dari kumpulan transakasi (*T*), dimana T->I. Setiap transaksi memiliki *ID* transaksi yang disebut *TID*.   
 
-Sebuah *association rule* dituliskan dalam bentuk X &#8594; Y, dimana  X->I,  Y->I. *Association rule* berbentuk *“If antecendent then consequent”* (Larose & Larose, 2015). *X* disebut sebagai *Antecedent atau left-hand side (LHS)* dan *Y* disebut *Consequent atau right-hand side (RHS)*. 
+Sebuah *association rule* dituliskan dalam bentuk X &#8594; Y, dimana  X&#8594;I,  Y&#8594;I. *Association rule* berbentuk *“If antecendent then consequent”* (Larose & Larose, 2015). *X* disebut sebagai *Antecedent atau left-hand side (LHS)* dan *Y* disebut *Consequent atau right-hand side (RHS)*. 
 
 *"If roti dan mentega, maka susu" ("Jika roti dan mentega dibel, maka susu juga akan dibeli pelanggan")*
 
@@ -245,7 +245,7 @@ Setelah didapatkan daftar transaksi yang hanya berisi item yang frequent, langka
 3. Untuk transaksi ketiga, karena frequent item yang tercatat <f,b> hanya berbagi <f> dengan f awalan subtree, maka count f naik 1 dan titik baru (b:1) dibentuk dan disambungkan sebagai anak cabang dari (f:3). Sehingga FP-tree setelah pemindaian TID 3 dapat diilustrasikan dengan gambar sebagai berikut
 
 ![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/003.png?raw=true)  
-   
+
 4. Pemindaian pada transaksi keempat membentuk cabang kedua pada pohon <(c:1),(b:1),(p:1). Setelah pemindaian TID 4, ilustrasi FP-tree dapat dilihat pada gambar berikut.
 
 ![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/004.png?raw=true)  
@@ -271,36 +271,37 @@ Berikut ini adalah pembentukan FP-*Growth* untuk contoh sebelumnya.
    Berikut ini adalah conditional pattern base untuk suffix p. Dimana untuk semua lintasan yang tidak mengandung p nilai support count sudah dikurangi. Terdapat dua conditional pattern base dengan suffix p yaitu (fcam :2) dan (cb:1). Agar lebih mudah dalam mendapatkan conditional FP-tree untuk suffix p, perhatikan gambar berikut ini.
 
 ![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/007.png?raw=true) 
-   
+
    Berdasarkan Gambar diatas *conditional* *pattern* *base* yang memenuhi *minimal* *support* adalah item c yaitu dengan support *count* 3. Sehingga didapatkan conditional FP-*tree* adalah {(c:3)}|p. Pada suffix p, conditional FP-*tree* yang terbentuk merupakan *single* *path* sehingga untuk mendapatkan frequent itemset dilakukan dengan mengkombinasikan saja conditional FP-*tree*. Jadi frequent itemset yang terbentuk adalah p, cp.
 
 2. Setelah menghilangkan item yang tidak mengandung dalam lintasan, maka *conditional pattern base* yang terbentuk adalah (fca:2) dan (fcab:1). Berikut ini adalah gambar untuk *conditional pattern* yang terbentuk.
 
 ![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/008.png?raw=true)    
-   
+
    Berdasarkan gambar diatas item yang memiliki *support* *count* lebih dari atau sama dengan 3 adalah a, c, f. Sehingga *conditional* FP-*tree* yang terbentuk adalah {(f:3, c:3, a:3)}|m. *Conditional* FP-*tree* yang terbentuk merupakan *single* *path*, sehingga *frequent* *itemset* didapatkan dengan mencari kombinasinya. *Frequent* *itemset* yang terbentuk adalah m, fm, cm, am, fcm, fam, cam, fcam.
 
    Pada gambar diatas dapat dilihat bahwa *support* *count* untuk item f adalah 2 dan untuk c adalah 1. Karena *support* *count* dari f dan c tidak lebih dari 3 maka untuk suffix b tidak ada *conditional* FP-*tree* yang dibangkitkan. Tidak ada conditional FP-*tree* yang dibangkitkan, sehingga *frequent* itemset yang terbentuk hanya b saja.
 
 3. Pembentukan FP-*Growth* untuk *suffix* a 
-  *Conditional* *pattern* base yang terbentuk untuk *suffix* a hanya ada satu yaitu (fc:3). Berikut ini adalah gambar *conditional* *pattern* base yang terbentuk untuk *suffix* a.
+    *Conditional* *pattern* base yang terbentuk untuk *suffix* a hanya ada satu yaitu (fc:3). Berikut ini adalah gambar *conditional* *pattern* base yang terbentuk untuk *suffix* a.
 
 ![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/009.png?raw=true) 
-   
+
   *Conditional pattern base* untuk *suffix* a berbentuk *single* *path* maka semua *item* diatas a pasti memenuhi *minimal* *support* *count* karena a memenuhi *minimal* *support* *count*. Jadi *conditional* FP-tree yang terbentuk adalah {(f:3, c:3)}|a. Pada suffix b, conditional FP-*tree* yang terbentuk juga merupakan *single* *path*. Jadi frequent itemset yang terbentuk adalah a, fa, ca, dan fca.
 
 4. Pembentukan FP-*Growth* untuk *suffix* c
 
    Sama halnya dengan *suffix* a, pada *suffix* c conditional pattern base yang terbentuk hanya ada satu yaitu (f:3). Untuk *suffix* c, *conditional* *pattern* base yang terbentuk adalah seperti pada gambar berikut.
    
+
 ![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/010.png?raw=true) 
-   
+
    Sama halnya dengan *suffix* a, pada *suffix* b *conditional* *pattern* *base* juga merupakan single path. Jadi conditional FP-tree yang terbentuk adalah {(f:3)}|c. Frequent itemset yang terbentuk untuk suffix c adalah c dan fc.
 
 5. Pembentukan FP-Growth untuk *suffix f conditional pattern* base
 
 ![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/011.png?raw=true) 
-   
+
    Berbeda dengan *suffix* yang lainnya, pada *suffix* f tidak ada conditional *pattern* *base* yang terbentuk. Karena tidak ada *conditional* *pattern* *base* yang terbentuk maka tidak ada conditional FP-*tree* yang terbentuk dan *fequent* *itemset* hanya berisi dirinya sendiri yaitu *item* f.
 
    
