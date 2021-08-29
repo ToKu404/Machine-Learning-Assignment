@@ -3004,7 +3004,7 @@ plt.gca().invert_yaxis()
 
 
 ​    
-![png](Tugas01_ML_H071191049_files/Tugas01_ML_H071191049_36_0.png)
+![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/plt1.png?raw=true)
 ​    
 
 
@@ -3504,7 +3504,7 @@ plt.show()
 
 
 ​    
-![png](Tugas01_ML_H071191049_files/Tugas01_ML_H071191049_53_0.png)
+![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/plt2.png?raw=true)
 ​    
 
 
@@ -3521,7 +3521,7 @@ plt.show()
 
 
 ​    
-![png](Tugas01_ML_H071191049_files/Tugas01_ML_H071191049_55_0.png)
+![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/plt3.png?raw=true)
 ​    
 
 
@@ -3542,7 +3542,7 @@ fit_fn(rules["lift"]))
      <matplotlib.lines.Line2D at 0x7fb8b60d9f50>]
 
 
-![png](Tugas01_ML_H071191049_files/Tugas01_ML_H071191049_57_1.png)
+![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/plt4.png?raw=true)
 ​    
 
 
@@ -4932,7 +4932,7 @@ plt.gca().invert_yaxis()
 ```
 
 
-![png](Tugas01_ML_H071191049_files/Tugas01_ML_H071191049_74_0.png)
+![alt text](https://github.com/ToKu404/Machine-Learning-Assignment/blob/main/Assets/Tugas1/plt5.png?raw=true)
 ​    
 
 
