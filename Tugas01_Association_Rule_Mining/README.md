@@ -1,9 +1,3 @@
-**Tugas01-Machine Learning**
-
-Nama 	: Muh.Ikhsan
-
-Nim		: H071191049
-
 # Association Rule Mining
 
 Analisis asosiasi (*Association Rule*) adalah metode *machine learning* dan *data mining* digunakan untuk menemukan hubungan yang menarik (*joint value*) item-item yang sering muncul  secara bersama-sama dalam suatu *database*. Aturan ini bisa berupa studi  transaksi di supermarket, misalnya  seseorang yang membeli susu bayi juga  membeli sabun mandi. Di sini berarti susu  bayi bersama dengan sabun mandi. Karena awalnya berasal dari studi tentang database transaksi konsumen untuk menentukan kebiasaan suatu produk dibeli bersama produk apa, maka aturan asosiasijuga sering dinamakan *Market Basket Analysis*. Pada *Market Basket Analysis* memungkinkan pengecer untuk mengidentifikasi hubungan item yang sering dibeli orang bersama-sama.
